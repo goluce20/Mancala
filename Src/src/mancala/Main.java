@@ -4,13 +4,12 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 /**
- * Set up the GUI
+ * Set up the UI
  **/
 public class Main {
 
     /**
-     * This method is run when the program starts
-     *
+     *run when the program starts
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater( () -> {
@@ -19,7 +18,7 @@ public class Main {
     }
 
     /**
-     * Create and display the GUI
+     * display the UI
      */
     public static void createAndShowGUI() {
         JFrame frame = new JFrame("Mancala");
