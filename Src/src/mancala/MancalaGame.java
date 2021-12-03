@@ -12,9 +12,7 @@ import java.awt.event.MouseListener;
 @SuppressWarnings("serial")
 class MancalaGame extends JPanel implements MouseListener {
 
-    /**
-     * Holds an instance of the mancala.Board class
-     */
+
     final Board board;
 
     /**
@@ -39,9 +37,7 @@ class MancalaGame extends JPanel implements MouseListener {
      */
     private int winningPlayer = -1;
 
-    /**
-     * Initialize the class
-     */
+
     public MancalaGame() {
         board = new Board(this, Color.blue, Color.red);
 
@@ -61,7 +57,6 @@ class MancalaGame extends JPanel implements MouseListener {
     /**
      * Retrieve the player who is currently having a turn
      * @return the current player number
-     * @throws RuntimeException if the player does not have a valid number
      */
     public int getCurrentPlayer() throws RuntimeException {
         if ( currentPlayer != 1 && currentPlayer != 2 ) {
@@ -81,8 +76,7 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Perform a player's turn by moving the stones between pits
-     * @param pit the pit selected by the user
-     * @return whether the user's turn is ended
+     * return whether the user's turn is ended
      */
     protected boolean moveStones(final int pit) {
         int pointer = pit;
@@ -147,7 +141,6 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Draw the stones in the pits
-     * @param g frame Graphics object
      */
     protected void drawStones(Graphics g) {
         int cx, cy; // extra centering correction
@@ -170,7 +163,6 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Paint information on the current player
-     * @param g Graphics object
      */
     protected void paintPlayerInfo(Graphics g) {
 
@@ -187,7 +179,6 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Draw the board and stones on the screen
-     * @param g frame Graphics object
      */
     @Override
     public void paintComponent(Graphics g) {
@@ -257,7 +248,6 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Perform a player's turn
-     * @param pit the pit selected by the player
      */
     public void doPlayerTurn(int pit) {
 
@@ -275,7 +265,6 @@ class MancalaGame extends JPanel implements MouseListener {
 
     /**
      * Watch for when the player selects a pit and perform the turn
-     * @param e the mouse click event
      */
     @Override
     public void mouseClicked(MouseEvent e) {
