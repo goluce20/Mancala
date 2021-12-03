@@ -17,9 +17,9 @@ class Board {
 
     /**
      * Initialize the class
-     * @param game instance of mancala.MancalaGame
-     * @param playerOneColor color to draw player one's pits in
-     * @param playerTwoColor color to draw player two's pits in
+     * game instance of mancala.MancalaGame
+     * playerOneColor color to draw player one's pits in
+     * playerTwoColor color to draw player two's pits in
      */
     public Board(mancala.MancalaGame game, Color playerOneColor, Color playerTwoColor) {
         this.game = game;
@@ -37,7 +37,7 @@ class Board {
 
     /**
      * Get the player color for the other player
-     * @return the player's color
+     * return the player's color
      */
     protected Color getOtherPlayerColor() {
         return game.getOtherPlayer() == 1 ? playerOneColor : playerTwoColor;
@@ -45,7 +45,6 @@ class Board {
 
     /**
      * Get the size of the board as a Dimension object
-     * @return
      */
     public Dimension getSize() {
         int height = 2 * (outerPadding + pitHeight) + innerPadding;
@@ -53,12 +52,8 @@ class Board {
         return new Dimension(width, height);
     }
 
-    /**
-     * Draw a row of pits
-     * @param g Graphics object
-     * @param x Beginning X position of row
-     * @param y Beginning Y position of row
-     */
+  
+     // Draw a row of pits
     protected void drawRow(Graphics g, int x, int y) {
 
         for (int i = 0; i < 6; ++i ) {
@@ -67,10 +62,8 @@ class Board {
         }
     }
 
-    /**
-     * Draw the storage spaces
-     * @param g Graphics object
-     */
+     //Draw the storage spaces
+
     protected void drawStores(Graphics g) {
         int round = 30;
         int resize = 20;
@@ -113,7 +106,6 @@ class Board {
 
     /**
      * Retrieve the X position of a pit
-     * @param pit a pit number
      * @return the pit's X position
      */
     public int getPitX(int pit) {
@@ -145,8 +137,6 @@ class Board {
 
     /**
      * Retrieve the Y position of a pit
-     * @param pit a pit number
-     * @return the pit's Y position
      */
     public int getPitY(int pit) {
 
@@ -160,8 +150,7 @@ class Board {
 
     /**
      * Get the X coordinate in the center of a pit
-     * @param pit a pit number
-     * @return X position
+     * return X position
      */
     public int getPitCenterX(int pit) {
         int x = getPitX(pit);
@@ -175,8 +164,7 @@ class Board {
 
     /**
      * Get the Y coordinate in the center of a pit
-     * @param pit a pit number
-     * @return Y position
+     * return Y position
      */
     public int getPitCenterY(int pit) {
         int y = getPitY(pit);
